@@ -1,0 +1,55 @@
+[11-Apr-2023 10:54:11 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Application" not found in /home/nwk5ar94jo4q/public_html/esan.megaenterprisegroup.com/pizzaAdmin/bootstrap/app.php:14
+Stack trace:
+#0 /home/nwk5ar94jo4q/public_html/esan.megaenterprisegroup.com/pizzaAdmin/public/index.php(47): require_once()
+#1 /home/nwk5ar94jo4q/public_html/esan.megaenterprisegroup.com/pizzaAdmin/index.php(21): require_once('/home/nwk5ar94j...')
+#2 {main}
+  thrown in /home/nwk5ar94jo4q/public_html/esan.megaenterprisegroup.com/pizzaAdmin/bootstrap/app.php on line 14
+[11-Apr-2023 10:54:19 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Application" not found in /home/nwk5ar94jo4q/public_html/esan.megaenterprisegroup.com/pizzaAdmin/bootstrap/app.php:14
+Stack trace:
+#0 /home/nwk5ar94jo4q/public_html/esan.megaenterprisegroup.com/pizzaAdmin/public/index.php(47): require_once()
+#1 /home/nwk5ar94jo4q/public_html/esan.megaenterprisegroup.com/pizzaAdmin/index.php(21): require_once('/home/nwk5ar94j...')
+#2 {main}
+  thrown in /home/nwk5ar94jo4q/public_html/esan.megaenterprisegroup.com/pizzaAdmin/bootstrap/app.php on line 14
+[11-Apr-2023 10:54:34 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Application" not found in /home/nwk5ar94jo4q/public_html/esan.megaenterprisegroup.com/pizzaAdmin/bootstrap/app.php:14
+Stack trace:
+#0 /home/nwk5ar94jo4q/public_html/esan.megaenterprisegroup.com/pizzaAdmin/public/index.php(47): require_once()
+#1 /home/nwk5ar94jo4q/public_html/esan.megaenterprisegroup.com/pizzaAdmin/index.php(21): require_once('/home/nwk5ar94j...')
+#2 {main}
+  thrown in /home/nwk5ar94jo4q/public_html/esan.megaenterprisegroup.com/pizzaAdmin/bootstrap/app.php on line 14
+[11-Apr-2023 10:56:58 UTC] PHP Warning:  require(/home/nwk5ar94jo4q/public_html/esan.megaenterprisegroup.com/pizzaAdmin/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/nwk5ar94jo4q/public_html/esan.megaenterprisegroup.com/pizzaAdmin/public/index.php on line 34
+[11-Apr-2023 10:56:58 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/nwk5ar94jo4q/public_html/esan.megaenterprisegroup.com/pizzaAdmin/public/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/nwk5ar94jo4q/public_html/esan.megaenterprisegroup.com/pizzaAdmin/public/index.php:34
+Stack trace:
+#0 /home/nwk5ar94jo4q/public_html/esan.megaenterprisegroup.com/pizzaAdmin/index.php(21): require_once()
+#1 {main}
+  thrown in /home/nwk5ar94jo4q/public_html/esan.megaenterprisegroup.com/pizzaAdmin/public/index.php on line 34
+[11-Apr-2023 10:57:08 UTC] PHP Warning:  require(/home/nwk5ar94jo4q/public_html/esan.megaenterprisegroup.com/pizzaAdmin/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/nwk5ar94jo4q/public_html/esan.megaenterprisegroup.com/pizzaAdmin/public/index.php on line 34
+[11-Apr-2023 10:57:08 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/nwk5ar94jo4q/public_html/esan.megaenterprisegroup.com/pizzaAdmin/public/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/nwk5ar94jo4q/public_html/esan.megaenterprisegroup.com/pizzaAdmin/public/index.php:34
+Stack trace:
+#0 /home/nwk5ar94jo4q/public_html/esan.megaenterprisegroup.com/pizzaAdmin/index.php(21): require_once()
+#1 {main}
+  thrown in /home/nwk5ar94jo4q/public_html/esan.megaenterprisegroup.com/pizzaAdmin/public/index.php on line 34
+[11-Apr-2023 11:01:11 UTC] PHP Warning:  require(/home/nwk5ar94jo4q/public_html/esan.megaenterprisegroup.com/pizzaAdmin/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/nwk5ar94jo4q/public_html/esan.megaenterprisegroup.com/pizzaAdmin/public/index.php on line 34
+[11-Apr-2023 11:01:11 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/nwk5ar94jo4q/public_html/esan.megaenterprisegroup.com/pizzaAdmin/public/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/nwk5ar94jo4q/public_html/esan.megaenterprisegroup.com/pizzaAdmin/public/index.php:34
+Stack trace:
+#0 /home/nwk5ar94jo4q/public_html/esan.megaenterprisegroup.com/pizzaAdmin/index.php(21): require_once()
+#1 {main}
+  thrown in /home/nwk5ar94jo4q/public_html/esan.megaenterprisegroup.com/pizzaAdmin/public/index.php on line 34
+[11-Apr-2023 11:01:17 UTC] PHP Warning:  require(/home/nwk5ar94jo4q/public_html/esan.megaenterprisegroup.com/pizzaAdmin/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/nwk5ar94jo4q/public_html/esan.megaenterprisegroup.com/pizzaAdmin/public/index.php on line 34
+[11-Apr-2023 11:01:17 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/nwk5ar94jo4q/public_html/esan.megaenterprisegroup.com/pizzaAdmin/public/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/nwk5ar94jo4q/public_html/esan.megaenterprisegroup.com/pizzaAdmin/public/index.php:34
+Stack trace:
+#0 /home/nwk5ar94jo4q/public_html/esan.megaenterprisegroup.com/pizzaAdmin/index.php(21): require_once()
+#1 {main}
+  thrown in /home/nwk5ar94jo4q/public_html/esan.megaenterprisegroup.com/pizzaAdmin/public/index.php on line 34
+[11-Apr-2023 11:01:19 UTC] PHP Warning:  require(/home/nwk5ar94jo4q/public_html/esan.megaenterprisegroup.com/pizzaAdmin/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/nwk5ar94jo4q/public_html/esan.megaenterprisegroup.com/pizzaAdmin/public/index.php on line 34
+[11-Apr-2023 11:01:19 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/nwk5ar94jo4q/public_html/esan.megaenterprisegroup.com/pizzaAdmin/public/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/nwk5ar94jo4q/public_html/esan.megaenterprisegroup.com/pizzaAdmin/public/index.php:34
+Stack trace:
+#0 /home/nwk5ar94jo4q/public_html/esan.megaenterprisegroup.com/pizzaAdmin/index.php(21): require_once()
+#1 {main}
+  thrown in /home/nwk5ar94jo4q/public_html/esan.megaenterprisegroup.com/pizzaAdmin/public/index.php on line 34
+[11-Apr-2023 11:02:46 UTC] PHP Warning:  require(/home/nwk5ar94jo4q/public_html/esan.megaenterprisegroup.com/pizzaAdmin/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/nwk5ar94jo4q/public_html/esan.megaenterprisegroup.com/pizzaAdmin/public/index.php on line 34
+[11-Apr-2023 11:02:46 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/nwk5ar94jo4q/public_html/esan.megaenterprisegroup.com/pizzaAdmin/public/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/nwk5ar94jo4q/public_html/esan.megaenterprisegroup.com/pizzaAdmin/public/index.php:34
+Stack trace:
+#0 /home/nwk5ar94jo4q/public_html/esan.megaenterprisegroup.com/pizzaAdmin/index.php(21): require_once()
+#1 {main}
+  thrown in /home/nwk5ar94jo4q/public_html/esan.megaenterprisegroup.com/pizzaAdmin/public/index.php on line 34
+[12-Apr-2023 06:13:10 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\AdminProduct::getCategoryForPizza() in /home/nwk5ar94jo4q/public_html/esan.megaenterprisegroup.com/pizzaAdmin/app/Http/Controllers/AdminProduct.php on line 782
