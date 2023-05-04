@@ -34,7 +34,7 @@
         Preloader end
     ********************-->
 
-    
+
     <!--**********************************
         Main wrapper start
     ***********************************-->
@@ -54,7 +54,7 @@
         <!--**********************************
             Nav header end
         ***********************************-->
-
+@include('navbar');
         <!--**********************************
             Header start
         ***********************************-->
@@ -100,20 +100,20 @@
                 </div>
                 <div class="container">
                     <div class="addProductWrapper">
-                        
+
                         <div class="row d-flex justify-content-center flex-column align-items-center">
                             <h4>Add Category</h4>
                             <div class="col-lg-10 shadow-sm p-3 mb-5 bg-body-tertiary rounded">
                         <div class="basic-form">
                             <form id="add-user-form">
-                             @csrf   
+                             @csrf
                              <div class="form-group">
                                     <select name="parent_id"  class="form-control mb-2" >
                                         <option value="">Select Parent Category</option>
                                         @foreach($parentCategories as $catgry)
                                         <option value="{{$catgry->id}}">{{$catgry->name}}</option>
-                                        @endforeach 
-                                    </select>       
+                                        @endforeach
+                                    </select>
                                     <input class="form-control mb-2" type="text" placeholder="Enter Category Name" name="name">
                                     <h4 class="card-title mt-5">Description</h4>
                                     <div class="basic-form">
@@ -125,7 +125,7 @@
                                     </div>
                                     <label>Category Image</label>
                                     <div class="input-group uploadDiv mb-3 px-2 py-2 rounded-pill bg-white shadow-sm">
-                                        
+
                                         <input id="upload" type="file" onchange="readURL(this);" class="form-control border-0 d-none" name="image">
                                         <label id="upload-label" for="upload" class="font-weight-light text-muted m-2" required>Upload image</label>
                                         <div class="input-group-append">
@@ -136,10 +136,10 @@
                         <div class="d-flex justify-content-center">
                                     <button type="submit" class="btn btn-primary btn-lg m-3"> Save Product </button>
                                 </div>
-                                   
-                                   
+
+
                                 </div>
-                               
+
                             </form>
                         </div>
                     </div>
@@ -151,8 +151,8 @@
         <!--**********************************
             Content body end
         ***********************************-->
-        
-        
+
+
         <!--**********************************
             Footer start
         ***********************************-->
@@ -168,7 +168,7 @@
             Footer end
         ***********************************-->
 
-        
+
         <!--**********************************
             Right sidebar start
         ***********************************-->
@@ -183,7 +183,7 @@
     <!--**********************************
         Scripts
     ***********************************-->
-  
+
             <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
     <script src="{{asset('public/assets/plugins/common/common.min.js')}}"></script>
@@ -221,7 +221,7 @@ $(form).on('submit', function(event){
         cache: false,
         processData: false,
         success:function(response)
-        { 
+        {
             if(response.status== "success"){
                 showSuccessAlert();
                 window.location.href = "http://esan.megaenterprisegroup.com/pizzaAdmin/view-category";
@@ -229,7 +229,7 @@ $(form).on('submit', function(event){
             else{
                 showError();
             }
-           
+
         },
         error: function() {
         }
@@ -254,7 +254,7 @@ function showSuccessAlert() {
         function readURL(input) {
             if (input.files && input.files[0]) {
                 var reader = new FileReader();
-        
+
                 reader.onload = function (e) {
                     $('#imageResult')
                         .attr('src', e.target.result);
@@ -262,26 +262,26 @@ function showSuccessAlert() {
                 reader.readAsDataURL(input.files[0]);
             }
         }
-        
+
         $(function () {
             $('#upload').on('change', function () {
                 readURL(input);
             });
         });
-        
+
         /*  ==========================================
             SHOW UPLOADED IMAGE NAME
         * ========================================== */
         var input = document.getElementById( 'upload' );
         var infoArea = document.getElementById( 'upload-label' );
-        
+
         input.addEventListener( 'change', showFileName );
         function showFileName( event ) {
           var input = event.srcElement;
           var fileName = input.files[0].name;
           infoArea.textContent = 'File name: ' + fileName;
         }
-        
+
             </script>
 </body>
 

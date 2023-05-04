@@ -33,7 +33,7 @@
         Preloader end
     ********************-->
 
-    
+
     <!--**********************************
         Main wrapper start
     ***********************************-->
@@ -42,14 +42,8 @@
         <!--**********************************
             Nav header start
         ***********************************-->
-        <div class="nav-header">
-            <div class="brand-logo">
-                <a href="index.html">
-                    <b class="logo-abbr">D</b>
-                    <span class="brand-title"><b>Dashboard</b></span>
-                </a>
-            </div>
-        </div>
+            @include('navbar');
+
         <!--**********************************
             Nav header end
         ***********************************-->
@@ -116,14 +110,14 @@
                         </div>
                     </div>
                 </div>
-               
+
             </div>
         </div>
         <!--**********************************
             Content body end
         ***********************************-->
-        
-        
+
+
         <!--**********************************
             Footer start
         ***********************************-->
@@ -139,7 +133,7 @@
             Footer end
         ***********************************-->
 
-        
+
         <!--**********************************
             Right sidebar start
         ***********************************-->
@@ -173,11 +167,11 @@
     <script>
     var delete_employee;
 
-    $(document).ready(function() 
+    $(document).ready(function()
     {
         viewCategories();
 
-    
+
     });
 
     function viewCategories()
@@ -189,11 +183,11 @@
             url: "http://esan.megaenterprisegroup.com/pizzaAdmin/api/get-toppings",
             type: "GET",
             success: function(data)
-            {   
+            {
                 var count = 1;
                 if ( data.status == "success")
                 {
-                    $.each(data.data, function(index,obj) 
+                    $.each(data.data, function(index,obj)
                     {
                         $list.append('<tr>'+
                                         '<td>'+count+'</td>'+
@@ -215,8 +209,8 @@
             },
             error: function(data)
             {
-            }           
-        });        
+            }
+        });
     }
     const swalWithBootstrapButtons = Swal.mixin({
   customClass: {
@@ -254,7 +248,7 @@
   reverseButtons: true
 }).then((result) => {
   if (result.isConfirmed) {
-    $.ajax({            
+    $.ajax({
             url: `http://esan.megaenterprisegroup.com/pizzaAdmin/api/delete-topping/${delete_id}`,
             type: "get",
             success: function(response)
@@ -273,11 +267,11 @@
                     showError();
                 }
             },
-            error: function(data) 
+            error: function(data)
             {
-            }           
+            }
         });
-    
+
   } else if (
     /* Read more about handling dismissals below */
     result.dismiss === Swal.DismissReason.cancel
@@ -289,8 +283,8 @@
     )
   }
 })
-      
-      
+
+
     }
 
     function editCategory(id)
@@ -298,7 +292,7 @@
         var emp_id = id;
         localStorage.setItem("emp_id",emp_id);
        window.location.href = "http://esan.megaenterprisegroup.com/pizzaAdmin/edit-toppings";
-        
+
     }
 </script>
 </body>

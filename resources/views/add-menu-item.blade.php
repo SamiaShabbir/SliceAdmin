@@ -41,14 +41,8 @@
         <!--**********************************
             Nav header start
         ***********************************-->
-        <div class="nav-header">
-            <div class="brand-logo">
-                <a href="index.html">
-                    <b class="logo-abbr">D</b>
-                    <span class="brand-title"><b>Dashboard</b></span>
-                </a>
-            </div>
-        </div>
+        @include('navbar');
+
         <!--**********************************
             Nav header end
         ***********************************-->
@@ -105,7 +99,8 @@
                                                     <select id="category" class="form-control text-capitalize"
                                                         name="cat_name"required>
                                                         @foreach ($get_category as $cat)
-                                                            <option class="text-capitalize {{ $cat->name }}cat" value="{{ $cat->name }}">
+                                                            <option class="text-capitalize {{ $cat->name }}cat"
+                                                                value="{{ $cat->name }}">
                                                                 {{ $cat->name }}</option>
                                                         @endforeach
                                                     </select>
@@ -215,7 +210,7 @@
     <script>
         $(document).ready(function() {
             var form = '#add-user-form';
-            var catValue = $( '.Pizzacat' ).addClass("d-none");
+            var catValue = $('.Pizzacat').addClass("d-none");
             $(form).on('submit', function(event) {
                 event.preventDefault();
 
@@ -232,7 +227,8 @@
                         console.log(response);
                         if (response.status === "success") {
                             showSuccessAlert()
-                            window.location.href = "http://esan.megaenterprisegroup.com/pizzaAdmin/menu";
+                            window.location.href =
+                                "http://esan.megaenterprisegroup.com/pizzaAdmin/menu";
                         }
                     },
                     error: function(response) {}
