@@ -3,13 +3,13 @@
 Table of Sass Contents
 
 1. Abstracts
-    _bs-custom.scss 
+    _bs-custom.scss
     _inheritance.scss
     _maps.scss
     _mixin.scss
     _variable.scss
 
-2. bootstrap 
+2. bootstrap
     -Here goes all official bootstrap scss files
 
 3. Global/Base
@@ -165,11 +165,11 @@ body {
     position: absolute;
     left: -200vw;
   }
-  
+
   .tabset .tab-panel {
     display: none;
   }
-  
+
   .tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
   .tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
   .tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),
@@ -178,11 +178,11 @@ body {
   .tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
     display: block;
   }
-  
+
   /*
    Styling
   */
-  
+
   .tabset > label {
     position: relative;
     display: inline-block;
@@ -192,7 +192,7 @@ body {
     cursor: pointer;
     font-weight: 600;
   }
-  
+
   .tabset > label::after {
     content: "";
     position: absolute;
@@ -202,29 +202,29 @@ body {
     height: 4px;
     background: #8d8d8d;
   }
-  
+
   .tabset > label:hover,
   .tabset > input:focus + label {
     color: #06c;
   }
-  
+
   .tabset > label:hover::after,
   .tabset > input:focus + label::after,
   .tabset > input:checked + label::after {
     background: #06c;
   }
-  
+
   .tabset > input:checked + label {
     border-color: #ccc;
     border-bottom: 1px solid #fff;
     margin-bottom: -1px;
   }
-  
+
   .tab-panel {
     padding: 30px 0;
     border-top: 1px solid #ccc;
   }
-  
+
   /*
    Demo purposes only
   */
@@ -268,7 +268,7 @@ body {
   padding: 6px 12px;
   border: 1px solid #ccc;
   border-top: none;
-} 
+}
 [tabindex="-1"]:focus {
   outline: 0 !important; }
 
@@ -425,7 +425,7 @@ select {
 button,
 [type="button"],
 [type="reset"],
-[type="submit"] 
+[type="submit"]
 
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
@@ -442,7 +442,7 @@ input[type="checkbox"] {
 input[type="date"],
 input[type="time"],
 input[type="datetime-local"],
-input[type="month"] 
+input[type="month"]
 
 textarea {
   overflow: auto;
@@ -4540,7 +4540,7 @@ a.close.disabled {
   .bs-popover-top .arrow::before, .bs-popover-auto[x-placement^="top"] .arrow::before {
     bottom: 0;
     border-top-color: rgba(0, 0, 0, 0.25); }
-  
+
   .bs-popover-top .arrow::after,
   .bs-popover-auto[x-placement^="top"] .arrow::after {
     bottom: 1px;
@@ -4560,7 +4560,7 @@ a.close.disabled {
   .bs-popover-right .arrow::before, .bs-popover-auto[x-placement^="right"] .arrow::before {
     left: 0;
     border-right-color: rgba(0, 0, 0, 0.25); }
-  
+
   .bs-popover-right .arrow::after,
   .bs-popover-auto[x-placement^="right"] .arrow::after {
     left: 1px;
@@ -4577,7 +4577,7 @@ a.close.disabled {
   .bs-popover-bottom .arrow::before, .bs-popover-auto[x-placement^="bottom"] .arrow::before {
     top: 0;
     border-bottom-color: rgba(0, 0, 0, 0.25); }
-  
+
   .bs-popover-bottom .arrow::after,
   .bs-popover-auto[x-placement^="bottom"] .arrow::after {
     top: 1px;
@@ -4606,7 +4606,7 @@ a.close.disabled {
   .bs-popover-left .arrow::before, .bs-popover-auto[x-placement^="left"] .arrow::before {
     right: 0;
     border-left-color: rgba(0, 0, 0, 0.25); }
-  
+
   .bs-popover-left .arrow::after,
   .bs-popover-auto[x-placement^="left"] .arrow::after {
     right: 1px;
@@ -17121,4 +17121,7 @@ button {
 .basic-filled-in-checkboxes .form-check {
   flex-basis: 14.28571%; }
 
+  .anvd{
+    color:red
+  }
 /*# sourceMappingURL=style.css.map */
