@@ -42,14 +42,8 @@
         <!--**********************************
             Nav header start
         ***********************************-->
-        <div class="nav-header">
-            <div class="brand-logo">
-                <a href="index.html">
-                    <b class="logo-abbr">D</b>
-                    <span class="brand-title"><b>Dashboard</b></span>
-                </a>
-            </div>
-        </div>
+        @include('navbar');
+
         <!--**********************************
             Nav header end
         ***********************************-->
@@ -225,7 +219,9 @@
                                     '<label for="upload" class="btn ButtonUpload text-white m-0 rounded-pill px-4"><small class="text-uppercase font-weight-bold text-muted text-white">Choose file</small></label>' +
                                     '</div>' +
                                     '</div>' +
-                                    '<div class="image-area mt-4"><img id="imageResult" src="http://esan.megaenterprisegroup.com/pizzaAdmin/public/images/'+obj.image+'" alt="" class="img-fluid rounded shadow-sm mx-auto d-block w-50"></div>' +
+                                    '<div class="image-area mt-4"><img id="imageResult" src="http://esan.megaenterprisegroup.com/pizzaAdmin/public/images/' +
+                                    obj.image +
+                                    '" alt="" class="img-fluid rounded shadow-sm mx-auto d-block w-50"></div>' +
                                     '</div>' +
                                     '</div>');
                             });
@@ -253,7 +249,8 @@
                     success: function(response) {
                         if (response) {
                             fireSweetAlert()
-                            window.location.href = "http://esan.megaenterprisegroup.com/pizzaAdmin/view-sauces";
+                            window.location.href =
+                                "http://esan.megaenterprisegroup.com/pizzaAdmin/view-sauces";
                         } else {
                             showError()
                         }

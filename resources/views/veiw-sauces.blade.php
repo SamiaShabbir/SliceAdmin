@@ -41,14 +41,8 @@
         <!--**********************************
             Nav header start
         ***********************************-->
-        <div class="nav-header">
-            <div class="brand-logo">
-                <a href="index.html">
-                    <b class="logo-abbr">D</b>
-                    <span class="brand-title"><b>Dashboard</b></span>
-                </a>
-            </div>
-        </div>
+        @include('navbar');
+
         <!--**********************************
             Nav header end
         ***********************************-->

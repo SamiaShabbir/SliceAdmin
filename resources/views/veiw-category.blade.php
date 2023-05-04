@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,12 +7,12 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Pizza Admin Panel</title>
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('public/assets/images/favicon.png')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('public/assets/images/favicon.png') }}">
     <!-- js_grid -->
-    <link rel="stylesheet" href="{{asset('public/assets/plugins/jsgrid/css/jsgrid.min.css')}}">
-    <link rel="stylesheet" href="{{asset('public/assets/plugins/jsgrid/css/jsgrid-theme.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('public/assets/plugins/jsgrid/css/jsgrid.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('public/assets/plugins/jsgrid/css/jsgrid-theme.min.css') }}">
     <!-- Custom Stylesheet -->
-    <link href="{{asset('/public/css/style.css')}}" rel="stylesheet">
+    <link href="{{ asset('/public/css/style.css') }}" rel="stylesheet">
     <!-- Bootstrap-Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <!-- Switchary -->
@@ -34,7 +32,7 @@
         Preloader end
     ********************-->
 
-    
+
     <!--**********************************
         Main wrapper start
     ***********************************-->
@@ -43,19 +41,8 @@
         <!--**********************************
             Nav header start
         ***********************************-->
-        <div class="nav-header">
-            <div class="brand-logo">
-                <a href="#">
-                    <b class="logo-abbr">D</b>
-                    <span class="brand-title"><b>Dashboard</b></span>
-                </a>
-            </div>
-            <div class="nav-control">
-                <div class="hamburger">
-                    <span class="toggle-icon"><i class="icon-menu"></i></span>
-                </div>
-            </div>
-        </div>
+        @include('navbar');
+
         <!--**********************************
             Nav header end
         ***********************************-->
@@ -63,7 +50,7 @@
         <!--**********************************
             Header start
         ***********************************-->
-        <!-- <div class="header">    
+        <!-- <div class="header">
             <div class="header-content clearfix">
                 <div class="header-left">
                     <div class="input-group icons">
@@ -150,7 +137,7 @@
                                                 <span class="mr-3 avatar-icon bg-success-lighten-2"><i class="icon-calender"></i></span>
                                                 <div class="notification-content">
                                                     <h4 class="notification-heading">Event Started</h4>
-                                                    <span class="notification-text">One hour ago</span> 
+                                                    <span class="notification-text">One hour ago</span>
                                                 </div>
                                             </a>
                                         </li>
@@ -159,7 +146,7 @@
                                                 <span class="mr-3 avatar-icon bg-danger-lighten-2"><i class="icon-calender"></i></span>
                                                 <div class="notification-content">
                                                     <h4 class="notification-heading">Event Started</h4>
-                                                    <span class="notification-text">One hour ago</span> 
+                                                    <span class="notification-text">One hour ago</span>
                                                 </div>
                                             </a>
                                         </li>
@@ -177,7 +164,7 @@
                                                 <span class="mr-3 avatar-icon bg-danger-lighten-2"><i class="icon-calender"></i></span>
                                                 <div class="notification-content">
                                                     <h4 class="notification-heading">Event Started</h4>
-                                                    <span class="notification-text">One hour ago</span> 
+                                                    <span class="notification-text">One hour ago</span>
                                                 </div>
                                             </a>
                                         </li>
@@ -247,12 +234,12 @@
 
             <div class="container-fluid">
                 <div class="row justify-content-between mb-3">
-					<div class="col-12 ">
-						<h2 class="page-heading text-center fw-bold fs-3">Hi,Welcome Back!</h2>
-					</div>
+                    <div class="col-12 ">
+                        <h2 class="page-heading text-center fw-bold fs-3">Hi,Welcome Back!</h2>
+                    </div>
                 </div>
                 <div class="row">
-                    
+
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
@@ -277,185 +264,180 @@
                         </div>
                     </div>
                 </div>
-               
+
             </div>
         </div>
         <!--**********************************
             Content body end
         ***********************************-->
-        
-        
+
+
         <!--**********************************
             Footer start
         ***********************************-->
         <div class="footer">
             <div class="copyright">
-                <p><div class="copyright text-center text-sm text-muted text-lg-start">
-                Developed by
-                <a href="https://www.tecjaunt.com" class="font-weight-bold" target="">Tecjaunt</a>
-                ©</p>
+                <p>
+                <div class="copyright text-center text-sm text-muted text-lg-start">
+                    Developed by
+                    <a href="https://www.tecjaunt.com" class="font-weight-bold" target="">Tecjaunt</a>
+                    ©</p>
+                </div>
             </div>
-        </div>
-        <!--**********************************
+            <!--**********************************
             Footer end
         ***********************************-->
 
-        
-        <!--**********************************
+
+            <!--**********************************
             Right sidebar start
         ***********************************-->
-        <!--**********************************
+            <!--**********************************
             Right sidebar end
         ***********************************-->
-    </div>
-    <!--**********************************
+        </div>
+        <!--**********************************
         Main wrapper end
     ***********************************-->
 
-    <!--**********************************
+        <!--**********************************
         Scripts
     ***********************************-->
- <script src="{{asset('public/assets/plugins/common/common.min.js')}}"></script>
-<script src="{{asset('/public/js/custom.min.js')}}"></script>
-<script src="{{asset('/public/js/settings.js')}}"></script>
-<script src="{{asset('/public/js/quixnav.js')}}"></script>
-<script src="{{asset('/public/js/styleSwitcher.js')}}"></script>
-<!-- switchery -->
-<script src="{{asset('/public/assets/plugins/innoto-switchery/dist/switchery.min.js')}}"></script>
-<!-- JS Grid -->
-<script src="{{asset('/public/assets/plugins/jquery-validation/jquery.validate.min.js')}}"></script>
-<script src="{{asset('/public/assets/plugins/jsgrid/js/jsgrid.min.js')}}"></script>
-<!-- JS GRID INTI -->
-<script src="{{ asset('public/js/plugins-init/jsgrid-init.js')}}"></script>
-<script src="{{ asset('public/js/plugins-init/footable-init.js')}}"></script>
-<script src="{{ asset('public/js/plugins-init/jquery.bootgrid-init.js')}}"></script>
-<script src="{{ asset('public/js/plugins-init/datatables.init.js')}}"></script>
-<!-- switchery init-->
-<!-- Sweet alert -->
+        <script src="{{ asset('public/assets/plugins/common/common.min.js') }}"></script>
+        <script src="{{ asset('/public/js/custom.min.js') }}"></script>
+        <script src="{{ asset('/public/js/settings.js') }}"></script>
+        <script src="{{ asset('/public/js/quixnav.js') }}"></script>
+        <script src="{{ asset('/public/js/styleSwitcher.js') }}"></script>
+        <!-- switchery -->
+        <script src="{{ asset('/public/assets/plugins/innoto-switchery/dist/switchery.min.js') }}"></script>
+        <!-- JS Grid -->
+        <script src="{{ asset('/public/assets/plugins/jquery-validation/jquery.validate.min.js') }}"></script>
+        <script src="{{ asset('/public/assets/plugins/jsgrid/js/jsgrid.min.js') }}"></script>
+        <!-- JS GRID INTI -->
+        <script src="{{ asset('public/js/plugins-init/jsgrid-init.js') }}"></script>
+        <script src="{{ asset('public/js/plugins-init/footable-init.js') }}"></script>
+        <script src="{{ asset('public/js/plugins-init/jquery.bootgrid-init.js') }}"></script>
+        <script src="{{ asset('public/js/plugins-init/datatables.init.js') }}"></script>
+        <!-- switchery init-->
+        <!-- Sweet alert -->
 
-<!-- Page-Level Scripts -->
-<script>
-    var delete_employee;
-    function fireSweetAlert() {
-        Swal.fire(
-        'Deleted successfully!',
-            'Item have been deleted!',
-            'success'
-        )
-    }
-    function showError() {
-        Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'Something went wrong!'
-        })
-    }
-    $(document).ready(function() 
-    {
-        viewCategories();
-    });
+        <!-- Page-Level Scripts -->
+        <script>
+            var delete_employee;
 
-    function viewCategories()
-    {
-        var $list = $("#categories_list");
-        $list.empty();
+            function fireSweetAlert() {
+                Swal.fire(
+                    'Deleted successfully!',
+                    'Item have been deleted!',
+                    'success'
+                )
+            }
 
-        $.ajax({
-            
-            url: "http://esan.megaenterprisegroup.com/pizzaAdmin/api/get-category",
-            type: "GET",
-            success: function(data)
-            {   
-                var count = 1;
-                if ( data.status == "success")
-                {
-                    $.each(data.data, function(index,obj) 
-                    {
-                        $list.append('<tr>'+
-                                        '<td>'+count+'</td>'+
-                                        '<td class="text-capitalize">'+obj.name+'</td>'+
-                                        '<td class="text-capitalize">'+obj.desc+'</td>'+
-                                        '<td class="ImgContainer"><img class="w-100 rounded" src="http://esan.megaenterprisegroup.com/pizzaAdmin/public/images/'+obj.image+'"></td>'+
-                                        '<td class=" w-auto">'+
-                                            '<span>'+
-                                                '<a id="'+obj.id+'" onclick="editCategory(this.id)" class="mr-4 w-100" data-toggle="tooltip" data-placement="top" title="Edit"><i class="bi bi-pen text-warning fs-1"></i> </a>'+
-                                                '<a id="'+obj.id+'" onclick="deleteCategory(this.id)" data-toggle="tooltip" data-placement="top" title="Delete"><i class="bi bi-trash text-danger fs-1"></i></a>'+
-                                            '</span>'+
-                                        '</td>'+
+            function showError() {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Something went wrong!'
+                })
+            }
+            $(document).ready(function() {
+                viewCategories();
+            });
+
+            function viewCategories() {
+                var $list = $("#categories_list");
+                $list.empty();
+
+                $.ajax({
+
+                    url: "http://esan.megaenterprisegroup.com/pizzaAdmin/api/get-category",
+                    type: "GET",
+                    success: function(data) {
+                        var count = 1;
+                        if (data.status == "success") {
+                            $.each(data.data, function(index, obj) {
+                                $list.append('<tr>' +
+                                    '<td>' + count + '</td>' +
+                                    '<td class="text-capitalize">' + obj.name + '</td>' +
+                                    '<td class="text-capitalize">' + obj.desc + '</td>' +
+                                    '<td class="ImgContainer"><img class="w-100 rounded" src="http://esan.megaenterprisegroup.com/pizzaAdmin/public/images/' +
+                                    obj.image + '"></td>' +
+                                    '<td class=" w-auto">' +
+                                    '<span>' +
+                                    '<a id="' + obj.id +
+                                    '" onclick="editCategory(this.id)" class="mr-4 w-100" data-toggle="tooltip" data-placement="top" title="Edit"><i class="bi bi-pen text-warning fs-1"></i> </a>' +
+                                    '<a id="' + obj.id +
+                                    '" onclick="deleteCategory(this.id)" data-toggle="tooltip" data-placement="top" title="Delete"><i class="bi bi-trash text-danger fs-1"></i></a>' +
+                                    '</span>' +
+                                    '</td>' +
                                     '</tr>');
-                        count++;
-                    });
-                }
-                else
-                {
-                    swal_btn.click();
-                }
-            },
-            error: function(data)
-            {
-            }           
-        });        
-    }
+                                count++;
+                            });
+                        } else {
+                            swal_btn.click();
+                        }
+                    },
+                    error: function(data) {}
+                });
+            }
 
-    function deleteCategory(id)
-    {
-        var delete_id = id;
-        swalWithBootstrapButtons.fire({
-  title: 'Are you sure?',
-  text: "You won't be able to revert this!",
-  icon: 'warning',
-  showCancelButton: true,
-  confirmButtonText: 'Yes, delete it!',
-  cancelButtonText: 'No, cancel!',
-  reverseButtons: true
-}).then((result) => {
-  if (result.isConfirmed) {
-    $.ajax({            
-            url: `http://esan.megaenterprisegroup.com/pizzaAdmin/api/delete-category/${delete_id}`,
-            type: "get",
-            success: function(response)
-            { 
-                if(response.status==="success"){
-                    swalWithBootstrapButtons.fire(
-      'Deleted!',
-      'Your file has been deleted.',
-      'success'
-    )
-     viewCategories();
-                }  
-                },         
-        });
-    
-  } else if (
-    result.dismiss === Swal.DismissReason.cancel
-  ) {
-    swalWithBootstrapButtons.fire(
-      'Cancelled',
-      'Your imaginary file is safe :)',
-      'error'
-    )
-  }
-})
+            function deleteCategory(id) {
+                var delete_id = id;
+                swalWithBootstrapButtons.fire({
+                    title: 'Are you sure?',
+                    text: "You won't be able to revert this!",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonText: 'Yes, delete it!',
+                    cancelButtonText: 'No, cancel!',
+                    reverseButtons: true
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        $.ajax({
+                            url: `http://esan.megaenterprisegroup.com/pizzaAdmin/api/delete-category/${delete_id}`,
+                            type: "get",
+                            success: function(response) {
+                                if (response.status === "success") {
+                                    swalWithBootstrapButtons.fire(
+                                        'Deleted!',
+                                        'Your file has been deleted.',
+                                        'success'
+                                    )
+                                    viewCategories();
+                                }
+                            },
+                        });
 
-       
-   
-    }
-    const swalWithBootstrapButtons = Swal.mixin({
-  customClass: {
-    confirmButton: 'btn btn-success',
-    cancelButton: 'btn btn-danger'
-  },
-  buttonsStyling: false
-})
+                    } else if (
+                        result.dismiss === Swal.DismissReason.cancel
+                    ) {
+                        swalWithBootstrapButtons.fire(
+                            'Cancelled',
+                            'Your imaginary file is safe :)',
+                            'error'
+                        )
+                    }
+                })
 
 
-    function editCategory(id)
-    {
-        var emp_id = id;
-        localStorage.setItem("emp_id",emp_id);
-       window.location.href = "http://esan.megaenterprisegroup.com/pizzaAdmin/edit-category";
-        
-    }
-</script>
+
+            }
+            const swalWithBootstrapButtons = Swal.mixin({
+                customClass: {
+                    confirmButton: 'btn btn-success',
+                    cancelButton: 'btn btn-danger'
+                },
+                buttonsStyling: false
+            })
+
+
+            function editCategory(id) {
+                var emp_id = id;
+                localStorage.setItem("emp_id", emp_id);
+                window.location.href = "http://esan.megaenterprisegroup.com/pizzaAdmin/edit-category";
+
+            }
+        </script>
 </body>
+
 </html>
