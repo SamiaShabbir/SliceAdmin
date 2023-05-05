@@ -26,7 +26,7 @@
                                 class="bi bi-cart3 icon_side" style="color: #E53935;"></i> <span
                                 class="fs-2">Product</span></a>
                         <ul aria-expanded="false" class="collapse">
-                            <li><a href="{{ url('/menu') }}">Veiw Product</a></li>
+                            <li><a href="{{ route('home') }}">Veiw Product</a></li>
                             <li><a href="{{ url('/pizza-admin/add-menu-item') }}">Add Product</a></li>
                         </ul>
                     </li>

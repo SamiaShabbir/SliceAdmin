@@ -2,7 +2,8 @@
      <div class="brand-logo">
          <a href="index.html">
              <b class="logo-abbr">D</b>
-             <span class="brand-title"><b>Pizza Admin Panel</b></span>
+             <img class="brand-title" src="{{ asset('/assets/images1/avatar/logo.png') }}" height="50" width="155"
+                 alt="">
          </a>
      </div>
  </div>

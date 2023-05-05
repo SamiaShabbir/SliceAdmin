@@ -18,7 +18,6 @@
     <!-- Switchary -->
     <link href="{{ asset('/assets/plugins/innoto-switchery/dist/switchery.min.css') }}" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 </head>
 
 <body>
@@ -86,20 +85,20 @@
                     {{ Breadcrumbs::render('home') }}
 
                     {{-- ///////////////////////////////////////////// --}}
-                    <div class="main-search-input-wrap ">
+                    <div class="main-search-input-wrap w-20 ">
                         <div class="main-search-input">
                             <form>
                                 <div class="search-box">
                                     <input name="search" class="search-input" type="text"
                                         placeholder="Search something..">
                                     <button
-                                        class="btn btn-primary d-flex flex-row inline-btn justify-content-center align-items-center"><i
-                                            class="bi bi-search m-1"></i><span class="fs-4">Search
+                                        class="btn btn-danger d-flex flex-row inline-btn justify-content-center align-items-center"><i
+                                            class="bi bi-search m-1"></i><span class="fs-6">Search
                                         </span> </button>
                                 </div>
                             </form>
                             <a href="{{ route('toppings') }}">
-                                <button class="btn btn-success inline-btn" style="height: 54px;"> Add Topping
+                                <button class="btn btn-warning inline-btn" style="height: 54px;"> Add Topping
                                 </button>
                             </a>
                         </div>
@@ -168,9 +167,9 @@
                                                     </td>
                                                     <td>
                                                         <form method="GET"
-                                                            action="{{ url('/delete-topping', ['id' => $data->id]) }}">
+                                                            action="{{ url('/pizza-admin/delete-toppings', ['id' => $data->id]) }}">
                                                             @csrf
-                                                            <input name="_method" type="hidden" value="DELETE">
+                                                            <input name="method" type="hidden" value="DELETE">
                                                             <button type="submit"
                                                                 class="btn show_confirm"data-toggle="tooltip"
                                                                 title='Delete'><i
@@ -186,7 +185,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="d-flex justify-content-center ">
+                <div class="d-flex justify-content-center " style="margin-left: 20%">
                     {!! $get_topping->links() !!}
                 </div>
             </div>

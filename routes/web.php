@@ -50,9 +50,11 @@ Route::get('/add-crust', function () {
 Route::get('/add-sauces', function () {
     return view('add-sauces');
 });
+
 Route::get('/add-toppings', function () {
-    return view('add-toppings');
+    return view('add-topping');
 })->name('toppings');
+
 Route::get('/edit-product', function () {
     return view('edit-product');
 });
@@ -122,9 +124,9 @@ Route::get('/view-crust', function () {
 Route::get('/view-sauces', function () {
     return view('veiw-sauces');
 });
-// Route::get('/view-toppings', function () {
-//     return view('veiw-toppings');
-// })->name('getTopping');
+Route::get('/view-toppings', function () {
+    return view('veiw-toppings');
+})->name('getTopping');
 Route::get('/view-widget', function () {
     return view('widget-basic');
 });
@@ -165,7 +167,7 @@ Route::group(['prefix' => 'pizza-admin'], function () {
     Route::post('/edit-crust/{id}', [AdminProduct::class, 'editCrust']);
     Route::get('/get-crust', [AdminProduct::class, 'Getcrust']);
     Route::get('/get-crust-by-id/{id}', [AdminProduct::class, 'getCrustByid']);
-    Route::get('/delete-topping/{id}', [AdminProduct::class, 'DeleteToppingByid']);
+    Route::get('/delete-toppings/{id}', [AdminProduct::class, 'deletetopping']);
     Route::get('/delete-crust/{id}', [AdminProduct::class, 'DeleteCrust']);
     Route::post('/add-pizza', [AdminProduct::class, 'addSpecialPizza']);
     Route::get('/add-pizza', [AdminProduct::class, 'getCategoryForPizza']);

@@ -7,6 +7,8 @@ use DB;
 use App\Models\Topping;
 use Validator;
 use Carbon\Carbon;
+use Alert;
+
 
 class AdminProduct extends Controller
 {
@@ -383,20 +385,47 @@ class AdminProduct extends Controller
             [
                 'name' => "required",
                 'price' => "required",
+                'regular_topping_18' => "required",
+                'less_price' => "required",
+                'less_price_18' => "required",
+                'normal_price' => "required",
+                'normal_price_18' => "required",
+                'extra_price' => "required",
+                'extra_price_18' => "required",
+                'cheese' => "required",
+                'cheese_price' => "required",
+                'cheese_price_18' => "required",
+                'sauce' => "required", 'normal_price' => "required",
+                'sauce_price' => "required",
+                'sauce_price_18' => "required",
 
             ];
 
         $validator = Validator::make($request->all(), $rules);
         if ($validator->passes()) {
 
-            $addTopping = DB::table('toppings')->insert([
-                'regular_toppings' => $request['name'],
-                'regular_topping_price' => $request['price'],
-            ]);
-            if ($addTopping) {
-                return response()->json(['status' => 'success', 'message' => 'toppings added successfully']);
+            $addTopping = new Topping();
+            $addTopping->regular_topping_price = $request->price;
+            $addTopping->regular_toppings = $request->name;
+            $addTopping->less_price = $request->less_price;
+            $addTopping->regular_topping_price_18 = $request->regular_topping_18;
+            $addTopping->less_price_18 = $request->less_price_18;
+            $addTopping->normal_price = $request->normal_price;
+            $addTopping->normal_price_18 = $request->normal_price_18;
+            $addTopping->extra_price = $request->extra_price;
+            $addTopping->extra_price_18 = $request->extra_price_18;
+            $addTopping->cheese = $request->cheese;
+            $addTopping->cheese_price = $request->cheese_price;
+            $addTopping->cheese_price_18 = $request->cheese_price_18;
+            $addTopping->sauce = $request->sauce;
+            $addTopping->sauce_price_18 = $request->sauce_price_18;
+            $saved = $addTopping->save();
+            if ($saved == "true") {
+                Alert::success('Success', 'Item Added Successfully');
+                return back();
             } else {
-                return response()->json(['status' => 'Failed', 'message' => 'Try again']);
+                Alert::error('Oops', 'Item not added');
+                return back();
             }
         } else {
             $errors = $validator->errors();
@@ -451,18 +480,20 @@ class AdminProduct extends Controller
 
 
     // Delete Toppings
-    public function DeleteToppingByid($id)
+    public function deletetopping($id)
     {
-        $get_topping = DB::table('toppings')->where('id', $id)->first();
-        if ($get_topping == true) {
-            $delete_topping = DB::table('toppings')->where('id', $id)->delete();
-            if ($delete_topping) {
-                return response()->json(['status' => 'success', 'message' => 'deleted successfully']);
+        $find = DB::table('toppings')->where('id', $id);
+        if ($find) {
+            $del = DB::table('toppings')->where('id', $id)->delete();
+            if ($del) {
+                Alert::success('Success', 'Item deleted successfully');
+                return back();
             } else {
-                return response()->json(['status' => 'failed', 'message' => 'Error Occured']);
+                Alert::error('Opps', 'Error Occureed Try Again');
+                return back();
             }
         } else {
-            return response()->json(['status' => 'failed', 'message' => 'no data found']);
+            Alert::error('Opps', 'Error Occureed Try Again');
         }
     }
     ////////////// crust api

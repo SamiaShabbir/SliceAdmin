@@ -58,48 +58,7 @@
         <!--**********************************
             Sidebar start
         ***********************************-->
-        <div class="nk-sidebar">
-            <div class="nk-nav-scroll">
-                <ul class="metismenu" id="menu">
-                    <ul aria-expanded="false">
-                        <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Product</a>
-                            <ul aria-expanded="false" class="collapse">
-                                <li><a href="restaurant-menus.html">Veiw Product</a></li>
-                                <li><a href="add-menu-item.html">Add Product</a></li>
-
-                            </ul>
-                        </li>
-                        <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Category</a>
-                            <ul aria-expanded="false" class="collapse">
-                                <li><a href="veiw-category.html">Veiw Category</a></li>
-                                <li><a href="add-category.html">Add Category</a></li>
-                            </ul>
-                        </li>
-                        <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Toppings</a>
-                            <ul aria-expanded="false" class="collapse">
-                                <li><a href="veiw-toppings.html">Veiw Toppings</a></li>
-                                <li><a href="add-toppings.html">Add Toppings</a></li>
-                            </ul>
-                        </li>
-                        <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Sauce For Dipping</a>
-                            <ul aria-expanded="false" class="collapse">
-                                <li><a href="veiw-sauces.html">Veiw Sauces</a></li>
-                                <li><a href="add-sauces.html">Add Sauce</a></li>
-                            </ul>
-                        </li>
-                        <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Cheese</a>
-                            <ul aria-expanded="false" class="collapse">
-                                <li><a href="veiw-cheese.html">Veiw Cheese</a></li>
-                            </ul>
-                        </li>
-                        <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Crust</a>
-                            <ul aria-expanded="false" class="collapse">
-                                <li><a href="veiw-cheese.html">Veiw Crust</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-            </div>
-        </div>
+        @include('sidebar');
         <!--**********************************
             Sidebar end
         ***********************************-->
@@ -108,17 +67,6 @@
             Content body start
         ***********************************-->
         <div class="content-body">
-
-            <div class="row page-titles mx-0">
-                <div class="col-sm-6 p-md-0">
-                </div>
-                <div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                        <li class="breadcrumb-item active"><a href="javascript:void(0)">Components</a></li>
-                    </ol>
-                </div>
-            </div>
 
 
 
@@ -133,13 +81,13 @@
                             {{ session()->get('message') }}
                         </div>
                     @endif
-                    <div class="col-xl-5 col-xxl-12">
+                    <div class="col-xl-10 col-xxl-10">
                         <div class="card">
                             <div class="card-body">
                                 <h4 class="card-title">Toppings And Attribute</h4>
                                 <div class=" nosrcoll">
                                     <div class="basic-form">
-                                        <form method="POST" action="{{ url('add-toppings') }}">
+                                        <form method="POST" action="{{ url('/pizza-admin/add-toppings') }}">
                                             @csrf
                                             <h5>Add Cheese</h5>
                                             <div class="form-row">
@@ -196,8 +144,7 @@
                                                 <div class="col-3">
                                                     <label class="font-weight-normal m-2"> 18" Price</label>
                                                     <input type="number" class="form-control"
-                                                        placeholder="18 inch Price" name="regular_topping_18"
-                                                        required>
+                                                        placeholder="18 inch Price" name="regular_topping_18" required>
                                                 </div>
                                             </div>
                                             <div class="form-row">
@@ -243,7 +190,7 @@
 
                                             </div>
                                             <div class="form-row">
-                                                <button class="btn btn-primary m-2 btn-lg" type="submit">Add
+                                                <button class="btn btn-danger m-2 btn-lg" type="submit">Add
                                                     Topping</button>
                                             </div>
                                         </form>
