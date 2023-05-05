@@ -10,6 +10,22 @@ use Carbon\Carbon;
 
 class AdminProduct extends Controller
 {
+    public function GetTopping(Request $request)
+    {
+        if (request('search')) {
+            $get_topping = Topping::where('cheese', request('search'))
+                ->orWhere('sauce', request('search'))
+                ->orWhere('regular_toppings', request('search'))
+                ->paginate('10');
+            if ($get_topping->isEmpty()) {
+                Alert::error('Opps', 'No data found');
+                return back();
+            }
+        } else {
+            $get_topping = Topping::orderByDesc('created_at')->paginate('2');
+        }
+        return view('veiw-toppings', compact(['get_topping']));
+    }
 
     public function getCategoryForPizza(Request $request)
     {
@@ -352,15 +368,15 @@ class AdminProduct extends Controller
             return response()->json(['status' => 'failed', 'message' => 'NO Data Found']);
         }
     }
-    public function getTopping(Request $request)
-    {
-        $get_toppings = DB::table('toppings')->get(['id', 'regular_toppings', 'regular_topping_price']);
-        if ($get_toppings) {
-            return response()->json(['status' => 'success', 'message' => 'data fetched successfully', 'data' => $get_toppings]);
-        } else {
-            return response()->json(['status' => 'failed', 'message' => 'no data found']);
-        }
-    }
+    // public function getTopping(Request $request)
+    // {
+    //     $get_toppings = DB::table('toppings')->get(['id', 'regular_toppings', 'regular_topping_price']);
+    //     if ($get_toppings) {
+    //         return response()->json(['status' => 'success', 'message' => 'data fetched successfully', 'data' => $get_toppings]);
+    //     } else {
+    //         return response()->json(['status' => 'failed', 'message' => 'no data found']);
+    //     }
+    // }
     public function AddToppings(Request $request)
     {
         $rules =

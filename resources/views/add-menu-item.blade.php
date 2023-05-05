@@ -75,17 +75,13 @@
                 </div>
             </div>
             <div class="container-fluid">
-                <div class="row justify-content-between mb-3">
-                    <div class="col-12 d-flex justify-content-center align-items-center">
-                        <h2 class="page-heading">Hi,Welcome Back!</h2>
-                    </div>
-                </div>
                 <div class="container">
                     <div class="addProductWrapper">
 
-                        <div class="row d-flex justify-content-center flex-column  align-items-center">
-                            <h4>Add Product</h4>
+                        <div class="row">
+                            <div class="col-2"></div>
                             <div class="col-lg-10 shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+                                <h4 class="text-center breadColor">Add Product</h4>
 
                                 <div class="basic-form">
                                     <form id="add-user-form">
@@ -137,7 +133,7 @@
                                                         class="img-fluid rounded shadow-sm mx-auto d-block w-50"></div>
                                                 <div class="d-flex justify-content-center">
                                                     <button type="submit" id="submit"
-                                                        class="btn btn-primary btn-lg m-3"> Save Product </button>
+                                                        class="btn btn-danger btn-lg m-3"> Save Product </button>
                                                 </div>
                                             </div>
 

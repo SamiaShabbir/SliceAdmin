@@ -75,14 +75,11 @@
                 </div>
             </div>
             <div class="container-fluid">
-                <div class="row justify-content-between mb-3">
-                    <div class="col-12 d-flex justify-content-center align-items-center">
-                        <h2 class="page-heading">Hi,Welcome Back!</h2>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="addProductWrapper">
-                        <h4 class="text-center">Build Your Pizza</h4>
+
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="addProductWrapper col-10">
+                        <h4 class="text-center breadColor">Build Your Pizza</h4>
 
                         <form id="add-user-form">
                             @csrf
@@ -91,7 +88,7 @@
                                     <hr />
                                 </div>
                                 <div class="d-flex justify-content-center">
-                                    <button type="submit" id="submit" class="btn btn-primary btn-lg m-3"> Update
+                                    <button type="submit" id="submit" class="btn btn-danger btn-lg m-3"> Update
                                     </button>
                                 </div>
                             </div>
