@@ -68,18 +68,13 @@
         <!-- row -->
 
         <div class="container-fluid">
-            <div class="row justify-content-between mb-3">
-                <div class="col-2"></div>
-                <div class="col-10 ">
-                    <h2 class="page-heading text-center m-2 fs-5 fw-bold">Hi,Welcome Back!</h2>
-                </div>
-            </div>
+
             <div class="row">
                 <div class="col-2"></div>
                 <div class="col-10">
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="card-title text-center">Menu List</h4>
+                            <h4 class="card-title text-center breadColor">Menu List</h4>
                             <div class="tab d-flex justify-content-around">
                                 <button class="tablinks active" onclick="openCity(event, 'Pizza')">Pizza</button>
                                 <button class="tablinks" onclick="openCity(event, 'Drinks')">Drinks</button>

@@ -81,16 +81,14 @@
             <!-- row -->
 
             <div class="container-fluid">
-                <div class="row justify-content-between mb-3">
-                    <div class="col-12 ">
-                        <h2 class="page-heading text-center">Hi,Welcome Back!</h2>
-                    </div>
-                </div>
+
                 <div class="row">
-                    <div class="col-12">
+                    <div class="col-2"></div>
+
+                    <div class="col-10">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Sauces</h4>
+                                <h4 class="card-title text-center breadColor">Sauces</h4>
                                 <div class="table-responsive">
                                     <table class="table table-bordered verticle-middle table-responsive-sm">
                                         <thead>

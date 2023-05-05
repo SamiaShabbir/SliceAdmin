@@ -88,19 +88,14 @@
                 </div>
             @endif
             <div class="container-fluid">
-                <div class="row justify-content-between mb-3">
-                    <div class="col-12 d-flex justify-content-center">
-                        <h2 class="page-heading text-center">Hi,Welcome Back!</h2>
-                    </div>
-                </div>
                 <div class="container">
                     <div class="addProductWrapper">
 
-                        <div class="row d-flex flex-column justify-content-center align-items-center">
-                            <h4>Add Sauces</h4>
-                            <br />
+                        <div class="row">
+                            <div class="col-2"></div>
                             <div class="col-lg-10 shadow-sm p-3 mb-5 bg-body-tertiary rounded">
-
+                                <h4 class="text-center breadColor">Add Sauces</h4>
+                                <br />
                                 <div class="basic-form">
                                     <form id="add-user-form">
                                         @csrf

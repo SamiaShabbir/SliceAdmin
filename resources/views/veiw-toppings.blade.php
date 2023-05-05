@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,19 +7,22 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Pizza Admin Panel</title>
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('public/assets/images/favicon.png')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/images/favicon.png') }}">
     <!-- js_grid -->
-    <link rel="stylesheet" href="{{asset('public/assets/plugins/jsgrid/css/jsgrid.min.css')}}">
-    <link rel="stylesheet" href="{{asset('public/assets/plugins/jsgrid/css/jsgrid-theme.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('assets/plugins/jsgrid/css/jsgrid.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/plugins/jsgrid/css/jsgrid-theme.min.css') }}">
     <!-- Custom Stylesheet -->
-    <link href="{{asset('/public/css/style.css')}}" rel="stylesheet">
+    <link href="{{ asset('/css/style.css') }}" rel="stylesheet">
     <!-- Bootstrap-Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <!-- Switchary -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <link href="{{ asset('/assets/plugins/innoto-switchery/dist/switchery.min.css') }}" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body>
+    @include('sweetalert::alert')
 
     <!--*******************
         Preloader start
@@ -42,8 +43,7 @@
         <!--**********************************
             Nav header start
         ***********************************-->
-            @include('navbar');
-
+        @include('navbar');
         <!--**********************************
             Nav header end
         ***********************************-->
@@ -51,6 +51,7 @@
         <!--**********************************
             Header start
         ***********************************-->
+
         <!--**********************************
             Header end ti-comment-alt
         ***********************************-->
@@ -58,8 +59,7 @@
         <!--**********************************
             Sidebar start
         ***********************************-->
-        @include('sidebar')
-
+        @include('sidebar');
         <!--**********************************
             Sidebar end
         ***********************************-->
@@ -69,26 +69,43 @@
         ***********************************-->
         <div class="content-body">
 
-            <div class="row page-titles mx-0">
-                <div class="col-sm-6 p-md-0">
-                </div>
-                <div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                        <li class="breadcrumb-item active"><a href="javascript:void(0)">Components</a></li>
-                    </ol>
-                </div>
-            </div>
+
+
             <!-- row -->
 
             <div class="container-fluid">
-                <div class="row justify-content-between mb-3">
-					<div class="col-12 ">
-						<h2 class="page-heading text-center">Hi,Welcome Back!</h2>
-					</div>
-                </div>
+
                 <div class="row">
-                    <div class="col-12">
+                    @if (session()->has('message'))
+                        <div class="alert alert-light d-flex align-items-center"
+                            style=" width:100%    ; margin-left: 1%;
+    margin-right: 1%;  ;background-color:dodgerblue; color:white">
+                            {{ session()->get('message') }}
+                        </div>
+                    @endif
+                    {{ Breadcrumbs::render('home') }}
+
+                    {{-- ///////////////////////////////////////////// --}}
+                    <div class="main-search-input-wrap ">
+                        <div class="main-search-input">
+                            <form>
+                                <div class="search-box">
+                                    <input name="search" class="search-input" type="text"
+                                        placeholder="Search something..">
+                                    <button
+                                        class="btn btn-primary d-flex flex-row inline-btn justify-content-center align-items-center"><i
+                                            class="bi bi-search m-1"></i><span class="fs-4">Search
+                                        </span> </button>
+                                </div>
+                            </form>
+                            <a href="{{ route('toppings') }}">
+                                <button class="btn btn-success inline-btn" style="height: 54px;"> Add Topping
+                                </button>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="col-xl-10 col-xxl-10">
                         <div class="card">
                             <div class="card-body">
                                 <h4 class="card-title">Toppings</h4>
@@ -96,21 +113,82 @@
                                     <table class="table table-bordered verticle-middle table-responsive-sm">
                                         <thead>
                                             <tr>
-                                            <th scope="col">S.NO</th>
-                                                <th scope="col">Name</th>
-                                                <th scope="col"> Price</th>
-                                                <th scope="col-4 text-center">Action</th>
+                                                <th scope="col">Cheese Name</th>
+                                                <th scope="col">Cheese Price</th>
+                                                <th scope="col"> Cheese Price 18 </th>
+                                                <th scope="col"> Sauce Name</th>
+                                                <th scope="col"> Sauce Price 12</th>
+                                                <th scope="col"> Sauce Price 18</th>
+                                                <th scope="col"> Topping Name</th>
+                                                <th scope="col"> Topping Price 12</th>
+                                                <th scope="col"> Topping Price 18</th>
+                                                <th scope="col"> Less price 12</th>
+                                                <th scope="col"> Less price 18</th>
+                                                <th scope="col"> Normal price 18</th>
+                                                <th scope="col"> Normal price 12</th>
+                                                <th scope="col"> Extra prize 12</th>
+                                                <th scope="col"> Extra prize 18</th>
+                                                <th scope="col">Actions</th>
                                             </tr>
                                         </thead>
-                                        <tbody id="toppings_list">
+                                        <tbody>
+                                            @foreach ($get_topping as $data)
+                                                <tr>
+                                                    <td>{{ $data->cheese }}</td>
+                                                    <td>{{ $data->cheese_price }}
+                                                    </td>
+                                                    <td>
+                                                        {{ $data->cheese_price_18 }}
+                                                    </td>
+                                                    <td>{{ $data->sauce }}</td>
+                                                    <td>
+                                                        {{ $data->sauce_price }}
+                                                    </td>
+
+                                                    <td> {{ $data->sauce_price_18 }}
+                                                    </td>
+                                                    <td>
+                                                        {{ $data->regular_toppings }}
+                                                    </td>
+                                                    <td>{{ $data->regular_topping_price }}
+                                                    </td>
+                                                    <td>{{ $data->regular_topping_price_18 }}
+                                                    </td>
+                                                    <td>{{ $data->less_price }}
+                                                    </td>
+                                                    <td>{{ $data->less_price_18 }}
+                                                    </td>
+                                                    <td>{{ $data->normal_price }}
+                                                    </td>
+                                                    <td>{{ $data->normal_price_18 }}
+                                                    </td>
+                                                    <td>{{ $data->extra_price }}
+                                                    </td>
+                                                    <td>{{ $data->extra_price_18 }}
+                                                    </td>
+                                                    <td>
+                                                        <form method="GET"
+                                                            action="{{ url('/delete-topping', ['id' => $data->id]) }}">
+                                                            @csrf
+                                                            <input name="_method" type="hidden" value="DELETE">
+                                                            <button type="submit"
+                                                                class="btn show_confirm"data-toggle="tooltip"
+                                                                title='Delete'><i
+                                                                    class="bi bi-trash color-danger"></i></button>
+                                                        </form>
+                                                    </td>
+                                                </tr>
                                         </tbody>
+                                        @endforeach
                                     </table>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
+                <div class="d-flex justify-content-center ">
+                    {!! $get_topping->links() !!}
+                </div>
             </div>
         </div>
         <!--**********************************
@@ -123,178 +201,69 @@
         ***********************************-->
         <div class="footer">
             <div class="copyright">
-            <p><div class="copyright text-center text-sm text-muted text-lg-start">
-                Developed by
-                <a href="https://www.tecjaunt.com" class="font-weight-bold" target="">Tecjaunt</a>
-                ©</p>
+                <p>
+                <div class="copyright text-center text-sm text-muted text-lg-start">
+                    Developed by
+                    <a href="https://www.tecjaunt.com" class="font-weight-bold" target="">Tecjaunt</a>
+                    ©</p>
+                </div>
             </div>
-        </div>
-        <!--**********************************
+            <!--**********************************
             Footer end
         ***********************************-->
 
 
-        <!--**********************************
+            <!--**********************************
             Right sidebar start
         ***********************************-->
-        <!--**********************************
+            <!--**********************************
             Right sidebar end
         ***********************************-->
-    </div>
-    <!--**********************************
+        </div>
+        <!--**********************************
         Main wrapper end
     ***********************************-->
 
-    <!--**********************************
+        <!--**********************************
         Scripts
     ***********************************-->
-    <script src="{{asset('public/assets/plugins/common/common.min.js')}}"></script>
-    <script src="{{asset('/public/js/custom.min.js')}}"></script>
-    <script src="{{asset('/public/js/settings.js')}}"></script>
-    <script src="{{asset('/public/js/quixnav.js')}}"></script>
-    <script src="{{asset('/public/js/styleSwitcher.js')}}"></script>
-    <!-- switchery -->
-    <script src="{{asset('/public/assets/plugins/innoto-switchery/dist/switchery.min.js')}}"></script>
-    <!-- JS Grid -->
-    <script src="{{asset('/public/assets/plugins/jquery-validation/jquery.validate.min.js')}}"></script>
-    <script src="{{asset('/public/assets/plugins/jsgrid/js/jsgrid.min.js')}}"></script>
-    <!-- JS GRID INTI -->
-    <script src="{{ asset('public/js/plugins-init/jsgrid-init.js')}}"></script>
-    <script src="{{ asset('public/js/plugins-init/footable-init.js')}}"></script>
-    <script src="{{ asset('public/js/plugins-init/jquery.bootgrid-init.js')}}"></script>
-    <script src="{{ asset('public/js/plugins-init/datatables.init.js')}}"></script>
-    <!-- switchery init-->
-    <script>
-    var delete_employee;
-
-    $(document).ready(function()
-    {
-        viewCategories();
-
-
-    });
-
-    function viewCategories()
-    {
-        var $list = $("#toppings_list");
-        $list.empty();
-
-        $.ajax({
-            url: "http://esan.megaenterprisegroup.com/pizzaAdmin/api/get-toppings",
-            type: "GET",
-            success: function(data)
-            {
-                var count = 1;
-                if ( data.status == "success")
-                {
-                    $.each(data.data, function(index,obj)
-                    {
-                        $list.append('<tr>'+
-                                        '<td>'+count+'</td>'+
-                                        '<td class="text-capitalize">'+obj.regular_toppings+'</td>'+
-                                        '<td>'+obj.regular_topping_price+'</td>'+
-                                        '<td>'+
-                                            '<span>'+
-                                                '<a id="'+obj.id+'" onclick="editCategory(this.id)" class="mr-4" data-toggle="tooltip" data-placement="top" title="Edit"><i class="bi bi-pen text-warning"></i> </a>'+
-                                                '<a id="'+obj.id+'" onclick="deleteCategory(this.id)" data-toggle="tooltip" data-placement="top" title="Delete"><i class="bi bi-trash text-danger"></i></a>'+
-                                            '</span>'+
-                                        '</td>'+
-                                    '</tr>');
-                        count++;
+        <script src="{{ asset('assets/plugins/common/common.min.js') }}"></script>
+        <script src="{{ asset('/js/custom.min.js') }}"></script>
+        <script src="{{ asset('/js/settings.js') }}"></script>
+        <script src="{{ asset('/js/quixnav.js') }}"></script>
+        <script src="{{ asset('/js/styleSwitcher.js') }}"></script>
+        <!-- switchery -->
+        <script src="{{ asset('/assets/plugins/innoto-switchery/dist/switchery.min.js') }}"></script>
+        <!-- JS Grid -->
+        <script src="{{ asset('/assets/plugins/jquery-validation/jquery.validate.min.js') }}"></script>
+        <script src="{{ asset('/assets/plugins/jsgrid/js/jsgrid.min.js') }}"></script>
+        <!-- JS GRID INTI -->
+        <script src="{{ asset('js/plugins-init/jsgrid-init.js') }}"></script>
+        <script src="{{ asset('js/plugins-init/footable-init.js') }}"></script>
+        <script src="{{ asset('js/plugins-init/jquery.bootgrid-init.js') }}"></script>
+        <script src="{{ asset('js/plugins-init/datatables.init.js') }}"></script>
+        <!-- switchery init-->
+        <script src="{{ asset('js/plugins-init/switchery-init.js') }}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
+        <script type="text/javascript">
+            $('.show_confirm').click(function(event) {
+                var form = $(this).closest("form");
+                var name = $(this).data("name");
+                event.preventDefault();
+                swal({
+                        title: `Are you sure you want to delete this record?`,
+                        text: "If you delete this, it will be gone forever.",
+                        icon: "warning",
+                        buttons: true,
+                        dangerMode: true,
+                    })
+                    .then((willDelete) => {
+                        if (willDelete) {
+                            form.submit();
+                        }
                     });
-                }
-                else
-                {
-                }
-            },
-            error: function(data)
-            {
-            }
-        });
-    }
-    const swalWithBootstrapButtons = Swal.mixin({
-  customClass: {
-    confirmButton: 'btn btn-success',
-    cancelButton: 'btn btn-danger'
-  },
-  buttonsStyling: false
-})
-
-
-    function fireSweetAlert() {
-        Swal.fire(
-        'Deleted successfully!',
-            'Item have been deleted!',
-            'success'
-        )
-    }
-    function showError() {
-        Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'Something went wrong!'
-        })
-    }
-    function deleteCategory(id)
-    {
-        var delete_id = id;
-        swalWithBootstrapButtons.fire({
-  title: 'Are you sure?',
-  text: "You won't be able to revert this!",
-  icon: 'warning',
-  showCancelButton: true,
-  confirmButtonText: 'Yes, delete it!',
-  cancelButtonText: 'No, cancel!',
-  reverseButtons: true
-}).then((result) => {
-  if (result.isConfirmed) {
-    $.ajax({
-            url: `http://esan.megaenterprisegroup.com/pizzaAdmin/api/delete-topping/${delete_id}`,
-            type: "get",
-            success: function(response)
-            {
-                if(response.status == "success")
-                {
-                    swalWithBootstrapButtons.fire(
-      'Deleted!',
-      'Your file has been deleted.',
-      'success'
-    )
-                    viewCategories();
-                }
-                else
-                {
-                    showError();
-                }
-            },
-            error: function(data)
-            {
-            }
-        });
-
-  } else if (
-    /* Read more about handling dismissals below */
-    result.dismiss === Swal.DismissReason.cancel
-  ) {
-    swalWithBootstrapButtons.fire(
-      'Cancelled',
-      'Your imaginary file is safe :)',
-      'error'
-    )
-  }
-})
-
-
-    }
-
-    function editCategory(id)
-    {
-        var emp_id = id;
-        localStorage.setItem("emp_id",emp_id);
-       window.location.href = "http://esan.megaenterprisegroup.com/pizzaAdmin/edit-toppings";
-
-    }
-</script>
+            });
+        </script>
 </body>
 
 

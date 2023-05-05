@@ -3,13 +3,13 @@
 Table of Sass Contents
 
 1. Abstracts
-    _bs-custom.scss 
+    _bs-custom.scss
     _inheritance.scss
     _maps.scss
     _mixin.scss
     _variable.scss
 
-2. bootstrap 
+2. bootstrap
     -Here goes all official bootstrap scss files
 
 3. Global/Base
@@ -174,7 +174,7 @@ body {
   .tabset .tab-panel {
     display: none;
   }
-  
+
   .tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
   .tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
   .tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),
@@ -183,11 +183,11 @@ body {
   .tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
     display: block;
   }
-  
+
   /*
    Styling
   */
-  
+
   .tabset > label {
     position: relative;
     display: inline-block;
@@ -197,7 +197,7 @@ body {
     cursor: pointer;
     font-weight: 600;
   }
-  
+
   .tabset > label::after {
     content: "";
     position: absolute;
@@ -207,29 +207,29 @@ body {
     height: 4px;
     background: #8d8d8d;
   }
-  
+
   .tabset > label:hover,
   .tabset > input:focus + label {
     color: #06c;
   }
-  
+
   .tabset > label:hover::after,
   .tabset > input:focus + label::after,
   .tabset > input:checked + label::after {
     background: #06c;
   }
-  
+
   .tabset > input:checked + label {
     border-color: #ccc;
     border-bottom: 1px solid #fff;
     margin-bottom: -1px;
   }
-  
+
   .tab-panel {
     padding: 30px 0;
     border-top: 1px solid #ccc;
   }
-  
+
   /*
    Demo purposes only
   */
@@ -276,7 +276,7 @@ body {
   padding: 6px 12px;
   border: 1px solid var(--color1);
   border-top: none;
-} 
+}
 [tabindex="-1"]:focus {
   outline: 0 !important; }
 
@@ -447,7 +447,7 @@ select {
 button,
 [type="button"],
 [type="reset"],
-[type="submit"] 
+[type="submit"]
 
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
@@ -464,7 +464,7 @@ input[type="checkbox"] {
 input[type="date"],
 input[type="time"],
 input[type="datetime-local"],
-input[type="month"] 
+input[type="month"]
 
 textarea {
   overflow: auto;
@@ -4559,7 +4559,7 @@ a.close.disabled {
   .bs-popover-top .arrow::before, .bs-popover-auto[x-placement^="top"] .arrow::before {
     bottom: 0;
     border-top-color: rgba(0, 0, 0, 0.25); }
-  
+
   .bs-popover-top .arrow::after,
   .bs-popover-auto[x-placement^="top"] .arrow::after {
     bottom: 1px;
@@ -4579,7 +4579,7 @@ a.close.disabled {
   .bs-popover-right .arrow::before, .bs-popover-auto[x-placement^="right"] .arrow::before {
     left: 0;
     border-right-color: rgba(0, 0, 0, 0.25); }
-  
+
   .bs-popover-right .arrow::after,
   .bs-popover-auto[x-placement^="right"] .arrow::after {
     left: 1px;
@@ -4596,7 +4596,7 @@ a.close.disabled {
   .bs-popover-bottom .arrow::before, .bs-popover-auto[x-placement^="bottom"] .arrow::before {
     top: 0;
     border-bottom-color: rgba(0, 0, 0, 0.25); }
-  
+
   .bs-popover-bottom .arrow::after,
   .bs-popover-auto[x-placement^="bottom"] .arrow::after {
     top: 1px;
@@ -4625,7 +4625,7 @@ a.close.disabled {
   .bs-popover-left .arrow::before, .bs-popover-auto[x-placement^="left"] .arrow::before {
     right: 0;
     border-left-color: rgba(0, 0, 0, 0.25); }
-  
+
   .bs-popover-left .arrow::after,
   .bs-popover-auto[x-placement^="left"] .arrow::after {
     right: 1px;
@@ -8452,7 +8452,7 @@ Color Mixins
   padding: 10px;
   color: #333;
 }
-::-webkit-input-placeholder { color: #fff;} 
+::-webkit-input-placeholder { color: #fff;}
 :-moz-placeholder { color: #fff; }
 ::-moz-placeholder { color: #fff; }
 :-ms-input-placeholder { color: #fff; }
@@ -17171,5 +17171,137 @@ button {
 
 .basic-filled-in-checkboxes .form-check {
   flex-basis: 14.28571%; }
+/* /////////////////////// */
+.main-search-input {
+    padding: 0 100px 0 0;
+    border-radius: 1px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    box-shadow: 0px 0px 0px 6px rgba(255, 255, 255, 0.3);
+}
 
+.fl-wrap {
+    float: left;
+    width: 100%;
+    position: relative;
+}
+
+.main-search-input:before {
+    content: '';
+    position: absolute;
+    bottom: -40px;
+    width: 50px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.41);
+    left: 50%;
+    margin-left: -25px;
+}
+
+.main-search-input-item {
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+    border-right: 1px solid #eee;
+    height: 50px;
+    position: relative;
+}
+
+.main-search-input-item input:first-child {
+    border-radius: 100%;
+}
+
+.main-search-input-item input {
+    float: left;
+    border: none;
+    width: 100%;
+    height: 50px;
+    padding-left: 20px;
+}
+
+.main-search-button {
+
+    background: #4DB7FE;
+}
+
+.search-box {
+    width: 100%;
+    position: relative;
+    display: flex;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.inline-btn {
+    width: 120px;
+}
+
+.search-input {
+    width: 800px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    padding: 15px 45px 15px 15px;
+    background-color: #eaeaeb;
+    color: #6c6c6c;
+    border-radius: 6px;
+    border: none;
+    transition: all .4s;
+}
+
+.search-input:focus {
+    border: none;
+    outline: none;
+    box-shadow: 0 1px 12px #b8c6db;
+    -moz-box-shadow: 0 1px 12px #b8c6db;
+    -webkit-box-shadow: 0 1px 12px #b8c6db;
+}
+
+.search-btn {
+    background-color: transparent;
+    font-size: 18px;
+    padding: 6px 9px;
+    margin-left: -45px;
+    border: none;
+    color: #6c6c6c;
+    transition: all .4s;
+    z-index: 10;
+}
+
+.search-btn:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+    color: black;
+}
+
+.search-btn:focus {
+    outline: none;
+    color: black;
+}
+
+.main-search-button {
+    position: absolute;
+    right: 0px;
+    height: 50px;
+    width: 120px;
+    color: #fff;
+    top: 0;
+    border: none;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    cursor: pointer;
+}
+
+.main-search-input-wrap {
+    max-width: 100%;
+    margin: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+:focus {
+    outline: 0;
+}
 /*# sourceMappingURL=style.css.map */

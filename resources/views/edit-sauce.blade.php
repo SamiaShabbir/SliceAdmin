@@ -88,19 +88,15 @@
                 </div>
             @endif
             <div class="container-fluid">
-                <div class="row justify-content-between mb-3">
-                    <div class="col-12 d-flex justify-content-center">
-                        <h2 class="page-heading text-center">Hi,Welcome Back!</h2>
-                    </div>
-                </div>
+
                 <div class="container">
                     <div class="addProductWrapper">
 
-                        <div class="row d-flex flex-column justify-content-center align-items-center">
-                            <h4>Edit Sauces</h4>
-                            <br />
+                        <div class="row">
+                            <div class="col-2"></div>
                             <div class="col-lg-10 shadow-sm p-3 mb-5 bg-body-tertiary rounded">
-
+                                <h4 class="text-center breadColor">Edit Sauces</h4>
+                                <br />
                                 <div class="basic-form">
                                     <form action="{{ url('/pizza-admin/add-dipping-sauce') }}" method="POST"
                                         enctype="multipart/form-data" id="add-user-form">
@@ -109,7 +105,7 @@
 
                                         </div>
                                         <div class="d-flex justify-content-center">
-                                            <button type="submit" class="btn btn-primary btn-lg m-3"> Save Product
+                                            <button type="submit" class="btn btn-danger btn-lg m-3"> Save Product
                                             </button>
                                         </div>
 
