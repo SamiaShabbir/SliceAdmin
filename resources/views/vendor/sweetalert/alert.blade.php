@@ -19,7 +19,7 @@
                         if (result.isConfirmed) {
                             var form = document.createElement('form');
                             form.action = event.target.href;
-                            form.method = 'POST';
+                            form.method = 'GET';
                             form.innerHTML = `
                     @csrf
                     @method('DELETE')
