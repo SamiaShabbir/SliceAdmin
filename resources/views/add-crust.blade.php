@@ -7,16 +7,16 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>pizza admin Panel</title>
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('public//assets/images/favicon.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('/assets/images/favicon.png') }}">
     <!-- js_grid -->
-    <link rel="stylesheet" href="{{ asset('public/assets/plugins/jsgrid/css/jsgrid.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('public/assets/plugins/jsgrid/css/jsgrid-theme.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/assets/plugins/jsgrid/css/jsgrid.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/assets/plugins/jsgrid/css/jsgrid-theme.min.css') }}">
     <!-- Custom Stylesheet -->
-    <link href="{{ asset('public/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/style.css') }}" rel="stylesheet">
     <!-- Bootstrap-Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <!-- Switchary -->
-    <link href="{{ asset('public/assets/plugins/innoto-switchery/dist/switchery.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('/assets/plugins/innoto-switchery/dist/switchery.min.css') }}" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 </head>
 
@@ -177,24 +177,24 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"
             integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
-        <script src="{{ asset('public/assets/plugins/common/common.min.js') }}"></script>
-        <script src="{{ asset('public/js/custom.min.js') }}"></script>
-        <script src="{{ asset('public/js/settings.js') }}"></script>
-        <script src="{{ asset('public/js/quixnav.js') }}"></script>
-        <script src="{{ asset('public/js/styleSwitcher.js') }}"></script>
+        <script src="{{ asset('/assets/plugins/common/common.min.js') }}"></script>
+        <script src="{{ asset('/js/custom.min.js') }}"></script>
+        <script src="{{ asset('/js/settings.js') }}"></script>
+        <script src="{{ asset('/js/quixnav.js') }}"></script>
+        <script src="{{ asset('/js/styleSwitcher.js') }}"></script>
         <!-- switchery -->
-        <script src="{{ asset('public/assets/plugins/innoto-switchery/dist/switchery.min.js') }}"></script>
+        <script src="{{ asset('/assets/plugins/innoto-switchery/dist/switchery.min.js') }}"></script>
         <!-- JS Grid -->
-        <script src="{{ asset('public/assets/plugins/jquery-validation/jquery.validate.min.js') }}"></script>
-        <script src="{{ asset('public/assets/plugins/jsgrid/js/jsgrid.min.js') }}"></script>
+        <script src="{{ asset('/assets/plugins/jquery-validation/jquery.validate.min.js') }}"></script>
+        <script src="{{ asset('/assets/plugins/jsgrid/js/jsgrid.min.js') }}"></script>
         <!-- JS GRID INTI -->
-        <script src="{{ asset('public/js/plugins-init/jsgrid-init.js') }}"></script>
-        <script src="{{ asset('public/js/plugins-init/footable-init.js') }}"></script>
-        <script src="{{ asset('public/js/plugins-init/jquery.bootgrid-init.js') }}"></script>
-        <script src="{{ asset('public/js/plugins-init/datatables.init.js') }}"></script>
+        <script src="{{ asset('/js/plugins-init/jsgrid-init.js') }}"></script>
+        <script src="{{ asset('/js/plugins-init/footable-init.js') }}"></script>
+        <script src="{{ asset('/js/plugins-init/jquery.bootgrid-init.js') }}"></script>
+        <script src="{{ asset('/js/plugins-init/datatables.init.js') }}"></script>
         <!-- switchery init-->
 
-        <script src="{{ asset('public/js/plugins-init/switchery-init.js') }}"></script>
+        <script src="{{ asset('/js/plugins-init/switchery-init.js') }}"></script>
         <script>
             $(document).ready(function() {
 

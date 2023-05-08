@@ -24,7 +24,7 @@ class AdminProduct extends Controller
                 return back();
             }
         } else {
-            $get_topping = Topping::orderByDesc('created_at')->paginate('2');
+            $get_topping = Topping::orderByDesc('created_at')->paginate('5');
         }
         return view('veiw-toppings', compact(['get_topping']));
     }

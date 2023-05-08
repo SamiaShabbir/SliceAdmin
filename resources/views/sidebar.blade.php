@@ -47,7 +47,7 @@
                     <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"> <i
                                 class="bi bi-bar-chart-steps icon_side" style="color: #E53935;"></i>Toppings</a>
                         <ul aria-expanded="false" class="collapse">
-                            <li><a href="{{ url('/view-toppings') }}">Veiw Toppings</a></li>
+                            <li><a href="{{ url('pizza-admin/get-toppings') }}">Veiw Toppings</a></li>
                             <li><a href="{{ url('/add-toppings') }}">Add Toppings</a></li>
                         </ul>
                     </li>
