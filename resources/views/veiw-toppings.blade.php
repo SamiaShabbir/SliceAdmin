@@ -46,7 +46,10 @@
         <!--**********************************
             Nav header end
         ***********************************-->
-
+        {{-- <div>
+            {{ Breadcrumbs::render('home') }}
+        </div> --}}
+        <!-- row -->
         <!--**********************************
             Header start
         ***********************************-->
@@ -70,7 +73,6 @@
 
 
 
-            <!-- row -->
 
             <div class="container-fluid">
 
@@ -82,7 +84,6 @@
                             {{ session()->get('message') }}
                         </div>
                     @endif
-                    {{ Breadcrumbs::render('home') }}
 
                     {{-- ///////////////////////////////////////////// --}}
                     <div class="main-search-input-wrap w-20 ">

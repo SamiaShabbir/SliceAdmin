@@ -41,7 +41,7 @@
 
                                  <li><a href="javascript:void()"><i class="icon-check"></i> <span>Online</span></a>
                                  </li>
-                                 <li><a href="javascript:void()"><i class="icon-key"></i> <span>Logout</span></a>
+                                 <li><a href="{{ route('logout') }}"><i class="icon-key"></i> <span>Logout</span></a>
                                  </li>
                              </ul>
                          </div>

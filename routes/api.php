@@ -26,7 +26,7 @@ Route::get('/test', [ProductController::class, 'test']);
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/register', [AuthController::class, 'register']);
 
-Route::middleware('auth:api')->group(function () {
+Route::middleware('auth')->group(function () {
     // your API routes here
     Route::get('/refresh', [AuthController::class, 'refresh']);
     Route::get('/logout', [AuthController::class, 'logout']);
